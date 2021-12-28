@@ -1,0 +1,24 @@
+/* COLOURS */
+$main-colour: rgba(20, 26, 50, 1);
+$main-colour-light: rgba(1, 34, 99, 1);
+
+$secondary-colour: rgba(153, 108, 41, 1);
+$secondary-colour-light: rgba(199, 152, 16, 1);
+
+$black: rgba(0, 0, 0, 1);
+$black-trans-one: rgba(0, 0, 0, 0.25);
+$black-trans-two: rgba(0, 0, 0, 0.5);
+$dark-grey: #666666;
+$light-grey: #cecece;
+$white: rgba(255, 255, 255, 1);
+
+/* GRADIENTS */
+$main-gradient: linear-gradient(90deg, $main-colour 0%, $main-colour 35%, $main-colour-light 100%);
+$secondary-gradient: linear-gradient(90deg, $secondary-colour 0%, $secondary-colour 35%, $secondary-colour-light 100%);
+
+/* SIZES */
+$site-width: 1280px;
+
+/* DECORATIONS */
+$shadow-one: 0 .5rem 2rem $black-trans-two;
+$shadow-one-hover: 0 .5rem .5rem $black-trans-one;
