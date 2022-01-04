@@ -89,6 +89,14 @@ header {
   z-index: 2;
 }
 
+@media (max-width: 425px) {
+  header .container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -179,9 +187,16 @@ section {
 
 @media (max-width: 890px) {
   #intro img {
-    margin-bottom: -10%;
+    margin-bottom: -20%;
     margin-top: 3rem;
     width: 60%;
+  }
+}
+
+@media (max-width: 425px) {
+  #intro img {
+    margin-top: 100px;
+    margin-bottom: -30%;
   }
 }
 

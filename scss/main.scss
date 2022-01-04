@@ -72,6 +72,11 @@ header {
     margin-bottom: -92px;
     position: relative;
     z-index: 2;
+    @include breakpoint(xsm){
+        .container {
+            justify-content: center;
+        }
+    }
 }
 
 section {
@@ -129,9 +134,13 @@ section {
         z-index: 4;
         width: 40%;
         @include breakpoint(md) {
-            margin-bottom: -10%;
+            margin-bottom: -20%;
             margin-top: 3rem;
             width: 60%
+        }
+        @include breakpoint(xsm){
+            margin-top: 100px;
+            margin-bottom: -30%;
         }
 
     };
