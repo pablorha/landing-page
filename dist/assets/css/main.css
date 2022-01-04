@@ -2,6 +2,9 @@
 /* GRADIENTS */
 /* SIZES */
 /* DECORATIONS */
+/*********************
+BREAKPOINTS
+*********************/
 *,
 *::after,
 *::before {
@@ -90,7 +93,7 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   position: relative;
   background-size: cover;
@@ -119,11 +122,23 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  height: 80vh;
 }
 
 #intro .container {
   padding: 0 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 890px) {
+  #intro .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding-bottom: 6rem;
+  }
 }
 
 #intro .container .intro-cta {
@@ -142,6 +157,13 @@ section {
           align-items: center;
   margin-top: 92px;
   text-align: center;
+  width: 60%;
+}
+
+@media (max-width: 890px) {
+  #intro .container .intro-cta {
+    width: 100%;
+  }
 }
 
 #intro .container .intro-cta h3 {
@@ -149,23 +171,50 @@ section {
 }
 
 #intro img {
-  max-height: 80vh;
+  max-height: initial;
   position: relative;
   z-index: 4;
-  width: auto;
+  width: 40%;
+}
+
+@media (max-width: 890px) {
+  #intro img {
+    margin-bottom: -10%;
+    margin-top: 3rem;
+    width: 60%;
+  }
 }
 
 #bullets {
   background-color: whitesmoke;
-  height: 60vh;
+  min-height: 70vh !important;
 }
 
 #bullets .container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 60% 40%;
-      grid-template-columns: 60% 40%;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
   grid-column-gap: 1rem;
+}
+
+@media (max-width: 890px) {
+  #bullets .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  #bullets .container {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
 }
 
 #bullets .container .bullets {
@@ -185,8 +234,14 @@ section {
   margin-right: 6rem;
 }
 
+@media (max-width: 768px) {
+  #bullets .container .bullets {
+    margin-right: initial;
+  }
+}
+
 #bullets .container .bullets ul {
-  margin-left: 1rem;
+  margin-left: 3rem;
 }
 
 #bullets .container .bullets ul li {
@@ -215,6 +270,12 @@ section {
   min-height: 300px;
   -webkit-box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.5);
           box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 890px) {
+  #bullets .container form {
+    margin-top: initial;
+  }
 }
 
 #bullets .container form label {
@@ -260,6 +321,9 @@ section {
 }
 
 #testimonials .container .card-wrapper {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -269,6 +333,20 @@ section {
           flex-direction: row;
   gap: 1rem;
   margin-bottom: 6rem;
+}
+
+@media (max-width: 768px) {
+  #testimonials .container .card-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 6rem;
+    margin-top: 3rem;
+  }
 }
 
 .testimonial-card {
@@ -295,6 +373,19 @@ section {
   position: relative;
   width: 33%;
   z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .testimonial-card {
+    width: 70%;
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .testimonial-card {
+    width: 100%;
+  }
 }
 
 .testimonial-card i {
@@ -355,6 +446,7 @@ section {
 #masterclass iframe {
   border-radius: 1rem;
   border: 0.2rem solid #c79810;
+  max-width: 100%;
 }
 
 #reviews {
@@ -379,9 +471,24 @@ section {
           align-items: flex-start;
 }
 
+@media (max-width: 425px) {
+  #reviews .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 #reviews .container img {
   width: 50%;
   height: auto;
+}
+
+@media (max-width: 425px) {
+  #reviews .container img {
+    width: 100%;
+  }
 }
 
 #outro {
@@ -395,10 +502,36 @@ section {
       -ms-flex-direction: row;
           flex-direction: row;
   height: 60vh;
+  min-height: initial;
+}
+
+@media (max-width: 890px) {
+  #outro {
+    height: initial;
+  }
 }
 
 #outro .container {
   padding: 0 1rem;
+}
+
+@media (max-width: 890px) {
+  #outro .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding-bottom: 6rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  #outro .container {
+    padding-bottom: 0;
+  }
 }
 
 #outro .container .intro-cta {
@@ -424,11 +557,22 @@ section {
 }
 
 #outro img {
-  max-height: 80vh;
   margin-top: -10vh;
   position: relative;
   z-index: 4;
   width: auto;
+}
+
+@media (max-width: 890px) {
+  #outro img {
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  #outro img {
+    margin-top: 3rem;
+  }
 }
 
 footer {
@@ -450,6 +594,18 @@ footer .container {
   padding: 3rem 0;
   text-transform: uppercase;
   letter-spacing: .01rem;
+}
+
+@media (max-width: 768px) {
+  footer .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .container a {
+    margin-bottom: 2rem;
+  }
 }
 
 .main-logo {
